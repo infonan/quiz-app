@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz - Quiz Master</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-wrapper">
+    <div class="quiz-box" id="quizBox">
+      <h2 id="questionTitle">Loading question...</h2>
+      <div id="optionsContainer" class="options"></div>
+      <div id="feedback" class="feedback"></div>
+      <button id="nextBtn" onclick="nextQuestion()" disabled>Next</button>
+    </div>
+
+    <div class="result-box" id="resultBox" style="display:none;">
+      <h2 style="font-size:3rem;margin-bottom:3rem;">Quiz Complete!</h2>
+      <p style="font-size:2rem;">Your Score: <span id="finalScore"></span></p>
+      <button id="return" onclick="window.location.href='main.html'">Attempt More Quizzes</button></button>
+    </div>
+  </div>
+
+  <script src="script/quiz.js"></script>
+</body>
+</html>

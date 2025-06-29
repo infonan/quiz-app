@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Master - Main</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <h2>Quiz Master</h2>
+    <div class="settings">
+      <button id="settingsBtn">⚙️</button>
+      <div class="settings-menu" id="settingsMenu">
+        <p><strong>Username:</strong> <span id="userDisplay"></span></p>
+        <label><input type="checkbox" id="darkModeToggle" /> Dark Mode</label>
+        <button style="font-size:1.5rem;" onclick="logout()">Logout</button>
+        <span style="text-align:center ; font-size:0.7rem;">Version 2.0</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h3 class="quiz-heading">Choose a Quiz</h3>
+    
+    <div class="quiz-grid" id="quizList">
+       <!-- Quizzes will be rendered by JS -->
+    </div>
+  </main>
+
+  <!-- Embedded quiz data -->
+  <script type="application/json" id="quizData">
+  [
+    {
+      "id": "html",
+      "title": "HTML Basics",
+      "color": "#e34c26",
+      "questions": [
+        {
+          "question": "What does HTML stand for?",
+          "options": ["Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
+          "answer": 0
+        },
+        {
+          "question": "Which tag is used for inserting a line break?",
+          "options": ["<br>", "<lb>", "<break>"],
+          "answer": 0
+        },
+         {
+          "question":"Which tag is used to create row in a table ?",
+          "options": ["<br>", "<tr>", "<td>","<th>"],
+          "answer": 1
+        }
+      ]
+    },
+    {
+      "id": "css",
+      "title": "CSS Fundamentals",
+      "color": "#264de4",
+      "questions": [
+        {
+          "question": "What does CSS stand for?",
+          "options": ["Cascading Style Sheets", "Colorful Style Syntax", "Computer Style Sheets"],
+          "answer": 0
+        },
+        {
+          "question": "Which property is used to change text color?",
+          "options": ["color", "text-color", "font-color"],
+          "answer": 0
+        },
+        {
+          "question": "Which property is used to add transition to any element?",
+          "options": ["transition", "transfer", "move","transform"],
+          "answer": 3
+        }
+      ]
+    },
+      {
+      "id": "gk",
+      "title": "General Knowledge",
+      "color": "green",
+      "questions": [
+        {
+          "question": "What is the strongest material in the world ?",
+          "options": ["Carbon-fibre", "Titanium", "Graphene","steel"],
+          "answer": 2
+        },
+        {
+          "question": "What is the full form onlf NHAI?",
+          "options": [" Nation Highway Authority of India", "National Health Authority of India", "National Horticulture Administration of India","Neural Health Advancement Implementation"],
+          "answer": 0
+        },
+        {
+          "question": "Who is known as the Iron man of India?",
+          "options": ["Jawaharlal Nehru", "Sardar Vallabhbhai Patel", "Atal Bihari Vajpayee","Subhash Chandra Bose"],
+          "answer": 1
+        }
+      ]
+    }
+  ]
+  </script>
+
+  <script src="script/main.js"></script>
+</body>
+</html>
