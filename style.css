@@ -1,0 +1,347 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom right, #dbeafe, #fef9c3);
+  font-size: 16px;
+}
+@media (max-width: 768px){
+  html{
+    font-size: 6px;
+  }
+}
+
+/* Centering container */
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1.2rem;
+}
+
+/* Login Box */
+.login-container {
+  padding: 5rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 0.5rem 1.54rem rgba(0, 0, 0, 0.15);
+  width: 75%;
+  max-width: 90%;
+  text-align: center;
+  background: linear-gradient(to bottom right, #fef9c3,#dbeafe);
+}
+
+/* Headings and message */
+.login-container h1 {
+  color: #1f2937;
+  margin-bottom: 8rem;
+  font-size: 4rem;
+}
+
+.login-container .welcome-msg {
+  font-size: 2rem;
+  color: #4b5563;
+  margin-bottom: 5rem;
+}
+
+/* Form and inputs */
+.login-form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+  border: 0.13rem solid #cbd5e1;
+  transition: 0.2s ease;
+}
+
+.login-form input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  background: #eff6ff;
+}
+
+/* Button */
+.login-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: green;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.login-form button:hover {
+  background-color: darkgreen;
+}
+
+/*mainpage*/
+
+/* Header */
+.main-header {
+  background: mediumpurple;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.54rem;
+  position: relative;
+}
+
+.main-header h2 {
+  margin: 0;
+}
+
+.settings {
+  position: relative;
+}
+
+.settings-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 4.5rem;
+  background-color: white;
+  color: black;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+  min-width: 40rem;
+  z-index: 10;
+}
+.settings-menu p, .settings-menu label {
+  margin: 2.5rem 0;
+  font-size: 1.8rem;
+}
+
+.settings-menu.show {
+  display: block;
+}
+
+.settings-menu button {
+  margin-top: 2rem;
+  width: 100%;
+}
+#settingsBtn {
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  font-size: 2rem;
+}
+
+.quiz-heading {
+  text-align: center;
+  margin: 3rem 1.25rem;
+  font-size: 3rem;
+  color: black;
+}
+
+.quiz-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  padding: 1.3rem 2.6rem;
+  justify-content: left;
+}
+
+.quiz-card {
+  color: white;
+  font-weight: bolder;
+  font-size: 3rem;
+  width: auto;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 5rem;
+  margin: 4rem;
+}
+
+.quiz-card:hover {
+  transform: scale(1.05);
+
+}
+#finalScore {
+  font-size: 2rem;
+  margin: 6rem auto;
+}
+#return {
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: green;
+  border: 0.2rem solid #ccc;
+  color: white;
+  font-size: 2rem;
+  
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: white;
+}
+body.dark .main-header {
+  background: #0f172a;
+}
+
+body.dark .settings-menu {
+  background: #334155;
+  color: white;
+}
+
+body.dark .quiz-card {
+  opacity: 0.9;
+}
+body.dark body {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+}
+body.dark .quiz-heading {
+  color:white;
+}
+
+/* start page */
+.start-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #dbeafe, #fef9c3);
+  padding: 1.3rem;
+}
+
+.start-box {
+  background: linear-gradient(to bottom right, #fef9c3,#dbeafe);
+  border-radius: 0.9rem;
+  padding: 1.9rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0.35rem 1.3rem rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.start-box h2 {
+  margin-bottom: 1.5rem;
+}
+
+.instructions {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 1.54rem;
+}
+
+.instructions ul {
+  padding-left: 1.3rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.instructions ul li {
+  margin: 2rem 0;
+}
+.start-box button {
+  padding: 0.8rem 1.3rem;
+  font-size: 1rem;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.start-box button:hover {
+  background-color: darkgreen;
+}
+
+/* quiz page */
+.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.6rem 1.3rem;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #dbeafe, #fef9c3);
+}
+
+.quiz-box, .result-box {
+  position: absolute;
+  background: linear-gradient(to bottom right, #fef9c3,#dbeafe);
+  padding: 2rem 1.5rem;
+  border-radius: 0.85rem;
+  width: 95%;
+  box-shadow: 0 0.4rem 1.3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  top: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 4rem 0;
+}
+
+#questionTitle {
+  font-size: 2.5rem;
+}
+
+.option-btn {
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: 0.12 solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #e0f2fe;
+  transition: background 0.2s;
+  margin-top: 2rem;
+}
+
+.option-btn:hover {
+  background: greenyellow;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.option-btn.correct {
+  background-color: #22c55e; /* green */
+  color: white;
+  border-color: #22c55e;
+}
+
+.option-btn.wrong {
+  background-color: #ef4444; /* red */
+  color: white;
+  border-color: #ef4444;
+}
+
+
+#nextBtn {
+  padding: 0.7rem 1.5rem;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#nextBtn:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
