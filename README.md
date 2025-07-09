@@ -28,15 +28,25 @@ It supports user login, quiz selection, score calculation, and a dark mode toggl
 ## 📁 Project Structure
 
 📁 quiz-app/
+
 ├── index.html # Login page
+
 ├── main.html # Dashboard with quizzes
+
 ├── start.html # Quiz introduction page
+
 ├── quiz.html # Quiz in action
+
 ├── style.css # All page styles
+
 ├── script/
+
 │ ├── main.js
+
 │ ├── start.js
+
 │ └── quiz.js
+
 └── README.md
 
 ---
